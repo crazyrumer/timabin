@@ -108,10 +108,10 @@ uint bitpatGet(uint a, uint startBit, uint bitCount)
 
 // Set bits pattern inside variable
 void bitpatSet(
-	uint * const ptr,
-	uint value,
-	const uint startingBit,
-	const uint bitSize)
+	uint * const	ptr,
+	uint			value,
+	const uint		startingBit,
+	const uint		bitSize)
 {
 	value <<= startingBit;
 
