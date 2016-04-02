@@ -43,3 +43,17 @@ void setZero(uint const size, void *const ptr)
 		b[i] ^= b[i];		// zero each byte
 	}
 }
+
+// Function which swaps variables - source https://en.wikipedia.org/wiki/XOR_swap_algorithm
+void xorSwap(int* a, int* b)
+{
+	*a ^= *b;
+	*b ^= *a;
+	*a ^= *b;
+}
+
+// Function which multiplies value by factor of 2^N via left shift operator
+void leftShiftX(int* a, uint n)
+{
+	*a = *a << n;
+}
