@@ -106,3 +106,21 @@ uint bitpatGet(uint a, uint startBit, uint bitCount)
 	return (a << (size - (startBit + bitCount))) >> (size - bitCount);
 }
 
+// Set bits pattern inside variable
+void bitpatSet(
+	uint * const ptr,
+	uint value,
+	const uint startingBit,
+	const uint bitSize)
+{
+	value <<= startingBit;
+
+	uint mask = 0u;
+	for (uint i = 0; i < bitSize; i++)
+	{
+		mask |= 1 << i;
+	}
+	mask = ~(mask << startingBit);
+
+	*ptr = (*ptr & mask) | (value << startingBit);
+}
