@@ -57,3 +57,19 @@ void leftShiftX(int* a, uint n)
 {
 	*a = *a << n;
 }
+
+// Function which determines if machine has arithmetic or logical right shift
+bool isArithmeticRightShift()
+{
+	int i = ~0;		// set all bits to 1
+	i >>= 1;		// right shift by 1
+
+	if (i > 0)		// higher bit got replaced by 0
+	{
+		return false;
+	}
+	else            // higher bit got replaced by 1
+	{
+		return true;
+	}
+}
