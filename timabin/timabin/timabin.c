@@ -29,3 +29,17 @@ void printBits(uint const size, void const * const ptr)
 	}
 	printf("\n");
 }
+
+// Function which sets value to zero
+// This is just experimental and should never be used in production
+void setZero(uint const size, void *const ptr)
+{
+	unsigned char * b = (unsigned char*)ptr;	// cast pointer to char pointer so it covers 1 byte
+	unsigned char byte = 0;					    // value to store byte
+
+	// iteratae over each byte inside the variable right to left
+	for (int i = size - 1; i >= 0; i--)
+	{
+		b[i] ^= b[i];		// zero each byte
+	}
+}
