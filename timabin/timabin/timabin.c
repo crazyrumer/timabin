@@ -84,12 +84,18 @@ uint setBit(uint a, const uint bit)
 // Set bit to 1 via pointer
 void setBitPtr(uint * const a, const uint bit)
 {
-	*a = *a | (1 << bit);
+	*a |= (1 << bit);
 }
 
 // Clear bit and return value
 uint clearBit(uint a, const uint bit)
 {
-	return a ^ (~(1 << bit));
+	return a & (~(1 << bit));
+}
+
+// Clear bit via pointer
+void clearBitPtr(uint * const a, const uint bit)
+{
+	*a &= (~(1 << bit));
 }
 

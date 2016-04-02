@@ -12,4 +12,6 @@ bool isArithmeticRightShift();
 
 uint setBit(uint a, const uint bit);
 void setBitPtr(uint * const a, const uint bit);
+
 uint clearBit(uint a, const uint bit);
+void clearBitPtr(uint * const a, const uint bit);
