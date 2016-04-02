@@ -75,10 +75,21 @@ bool isArithmeticRightShift()
 }
 
 
-// Function sets bit to 1 inside integer if it was 0
-unsigned int setBit(unsigned int a, unsigned int bit)
+// Set bit to 1 and return value
+uint setBit(uint a, const uint bit)
 {
-	unsigned int mask = 1 << bit;
-	a = a | mask;
-	return a;
+	return a | (1 << bit);
 }
+
+// Set bit to 1 via pointer
+void setBitPtr(uint * const a, const uint bit)
+{
+	*a = *a | (1 << bit);
+}
+
+// Clear bit and return value
+uint clearBit(uint a, const uint bit)
+{
+	return a ^ (~(1 << bit));
+}
+
