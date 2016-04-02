@@ -99,3 +99,10 @@ void clearBitPtr(uint * const a, const uint bit)
 	*a &= (~(1 << bit));
 }
 
+// Get bits pattern from variable
+uint bitpatGet(uint a, uint startBit, uint bitCount)
+{
+	uint size = sizeof(a) * 8;
+	return (a << (size - (startBit + bitCount))) >> (size - bitCount);
+}
+

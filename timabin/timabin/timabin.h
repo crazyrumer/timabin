@@ -15,3 +15,5 @@ void setBitPtr(uint * const a, const uint bit);
 
 uint clearBit(uint a, const uint bit);
 void clearBitPtr(uint * const a, const uint bit);
+
+uint bitpatGet(uint a, uint startBit, uint bitCount);
