@@ -73,3 +73,12 @@ bool isArithmeticRightShift()
 		return true;
 	}
 }
+
+
+// Function sets bit to 1 inside integer if it was 0
+unsigned int setBit(unsigned int a, unsigned int bit)
+{
+	unsigned int mask = 1 << bit;
+	a = a | mask;
+	return a;
+}

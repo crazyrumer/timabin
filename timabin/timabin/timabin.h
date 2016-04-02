@@ -9,3 +9,4 @@ void setZero(uint const size, void *const ptr);
 void xorSwap(int* a, int* b);
 void leftShiftX(int* a, uint n);
 bool isArithmeticRightShift();
+unsigned int setBit(unsigned int a, unsigned int bit);
