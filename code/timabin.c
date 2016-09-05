@@ -1,8 +1,12 @@
 #include "timabin.h"
 
 // Function which prints out bytes of the variable
-// Input size: size of the variables in bytes
-// Input ptr: pointer to the variable
+// 
+// Input size:	size of the variables in bytes
+// Input ptr:	pointer to the variable we want to print binary equivalent
+//
+//Return nothing
+
 void printBits(uint const size, void const * const ptr)
 {
 	unsigned char * b	= (unsigned char*)ptr;	// cast pointer to char pointer so it covers 1 byte
