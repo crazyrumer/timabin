@@ -17,8 +17,8 @@ void printBits(uint const size, void const * const ptr)
 		for (int j = 7; j >= 0; j--)
 		{
 			unsigned char mask = 1 << j;		// create mask to filter each individual bit
-			unsigned char and = byte & mask;				// AND mask with byte to find out which bit is 0 or 1
-			unsigned char result = and >> j;				// right shift the filtered bit to the lowest bit
+			unsigned char and = byte & mask;	// AND mask with byte to find out which bit is 0 or 1
+			unsigned char result = and >> j;	// right shift the filtered bit to the lowest bit
 			printf("%u", result);				// print out result
 
 			if (j % 4 == 0)
